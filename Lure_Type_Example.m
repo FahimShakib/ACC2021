@@ -242,7 +242,7 @@ subplot(211)
 plot(tmtf,y_NL-mean(y_NL),tmtf,psi-mean(psi),'--')
 hold all
 plot(tmtf,y_NLv,tmtf,psiv-mean(psiv)+mean(y_NLv),'--')
-l1 = legend('$\bar{y}_t$','$\bar{\psi}_t$','$\bar{y}_v$','$\bar{\psi}_v$',...
+l1 = legend('$\bar{y}_t$','$\bar{\zeta}_t$','$\bar{y}_v$','$\bar{\zeta}_v$',...
     'orientation','Horizontal');
 xlabel('Time [sec]')
 ylabel('Steady-State Output')
@@ -255,7 +255,7 @@ subplot(212)
 plot(tmtf,y_NL-mean(y_NL)-psi+mean(psi))
 hold all
 plot(tmtf,y_NLv-mean(y_NLv)-psiv+mean(psiv))
-l2 = legend('$\bar{y}_t-\bar{\psi}_t$','$\bar{y}_v-\bar{\psi}_v$',...
+l2 = legend('$\bar{y}_t-\bar{\zeta}_t$','$\bar{y}_v-\bar{\zeta}_v$',...
     'orientation','Horizontal');
 ylabel('Steady-State Error')
 xlabel('Time [sec]')
@@ -289,8 +289,8 @@ semilogx(f01,magf1,'kx','MarkerSize', 12)
 legend('$\Sigma$','$\Sigma_{r}^0$','$\Sigma_r$','$\Omega_0^1$',...
     'location','SW')
 xlabel('Frequency [Hz]')
-ylabel('Magnitude $y,\psi$ [dB]')
-title('$u$')
+ylabel('Output Magnitude [dB]')
+title('Input $U$')
 set(gca,'fontsize', 12)
 xlim([1e-2 1e1])
 ylim([-50 12])
@@ -301,7 +301,7 @@ semilogx(woutr/2/pi,Magrf(2,:),'LineWidth',2,'linestyle',':');grid on;
 semilogx(f02,magf2,'kx','MarkerSize', 12)
 legend('$\Sigma$','$\Sigma_{r}^0$','$\Sigma_r$','$\Omega_0^2$',...
     'location','SW')
-title('$\varphi(y),\varphi(\psi)$')
+title('Input $R$')
 xlabel('Frequency [Hz]')
 xlim([1e-2 1e1])
 ylim([-50 12])
